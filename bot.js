@@ -92,19 +92,7 @@ client.user.setStatus("dnd")
 
 
 
- client.on('guildMemberRemove', member => {
-  const channel = member.guild.channels.find('name', 'welcome');
-  if (!channel) return;
-  let memberavatar = member.user.avatarURL
-  let embed = new Discord.RichEmbed()
-    .setColor('RANDOM')
-    .setThumbnail(memberavatar)
-    .addField('**✋ |Good bye| ✋**',`**[${member}]**`)
-    .addField('**👇 |Number of members now| 👇**',`**[${member.guild.memberCount}]**`)
- 
-    channel.send({embed:embed});
- }
-});
+
 
 
 
@@ -159,17 +147,10 @@ client.on("message", message => {
 
 
 
-client.on('ready', () => {
-    setInterval(function(){
-        client.guilds.get('444968797221158922').roles.find('name', 'NRED').edit({color: 'RANDOM'}) 
-    },100);
 
 
 
 
-
-
-    
     
     
 
